@@ -1,0 +1,26 @@
+body
+    br
+    br
+
+    b(style="font-size:16pt") Latest Match booking
+    br
+    br
+    form(action="http://localhost:9000/mo" method='POST' style="border:2px solid black; margin:50px;background-color:peachpuff")
+        
+        br
+        br
+       
+        label Sport: #{sport} 
+        br
+        label Date of event: #{date}
+        br
+        label Time: #{time}
+        br
+        label Vs: #{vs}
+        br
+        label Venue: #{venue}
+     
+        br
+        br
+
+        input(type="submit" value="Ok" style="width:50px ;height:50px")

@@ -1,0 +1,47 @@
+
+<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+
+
+<script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+<script type="text/javascript"></script>
+
+<body>
+ 
+    <div id="container" style="width:500px; height:500px; text-align: center;"></div>
+    <script>
+         anychart.onDocumentReady(function() {
+ 
+         // set the data
+         var data = {
+                        header: ["Name", "Number of people"],
+                        rows: [
+                                  ["★", 5],
+                                  ["★★", 10],
+                                  ["★★★", 35],
+                                  ["★★★★", 25],
+                                  ["★★★★★", 40]
+                               ]};
+ 
+        // create the chart
+        var chart = anychart.column();
+ 
+        // add the data
+        chart.data(data);
+ 
+        // set the chart title
+        chart.title("Rating of Sports Club");
+ 
+        // draw
+        chart.container("container");
+        chart.draw();
+                        });
+    </script>  
+    
+    <form action="http://localhost:9000/ch">
+    <input type="submit" value="Ok" style="width:50px; height:50px "/>
+    </form>
+      
+  
+</body>
